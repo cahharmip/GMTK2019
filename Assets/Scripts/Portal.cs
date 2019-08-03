@@ -10,7 +10,6 @@ public class Portal : MonoBehaviour
   private const float OFFSET = 0.5f;
   public void Received(Vector3 hitPosition)
   {
-    Debug.Log("recieved");
     _LinkedPortal.LaserForward(hitPosition);
   }
 
