@@ -49,7 +49,7 @@ public class LaserController : MonoBehaviour
 
     private void CastLaser()
     {
-        laserVertices = 1;
+        laserVertices = 0;
         laser.SetPosition(laserVertices++, transform.position);
         CastLaser(transform.position, transform.forward, 25);
     }
