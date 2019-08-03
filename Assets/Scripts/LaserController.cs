@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class LaserController : MonoBehaviour
 {
-    private void Update()
+  private void Start()
+  {
+    RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward);
+    foreach (RaycastHit hit in hits)
     {
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward);
-        foreach (RaycastHit hit in hits)
-        {
-            if (hit.collider.tag.Equals("Wall"))
-            {
-                Transform wall = hit.collider.transform;
-                Vector3 localHitPosition = hit.point - wall.position;
-
-								// Send signal to adjacent wall in order to generate the laser ray in next room
-                Debug.Log(localHitPosition);
-            }
-        }
+      if (hit.collider.tag.Equals("Wall"))
+      {
+        Transform wall = hit.collider.transform;
+        Vector3 localHitPosition = hit.point - wall.position;
+        Debug.DrawRay(transform.position, hit.collider.transform.position, Color.red, 1000f);
+        // Send signal to adjacent wall in order to generate the laser ray in next room
+        wall.GetComponent<Portal>().Received(localHitPosition);
+      }
+      else
+      {
+        Debug.Log("Me ending..");
+        break;
+      }
     }
+  }
 }

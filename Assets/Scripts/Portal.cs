@@ -7,13 +7,15 @@ public class Portal : MonoBehaviour
   [SerializeField]
   private Portal _LinkedPortal;
 
-  public void Received()
+  private const float OFFSET = 0.5f;
+  public void Received(Vector3 hitPosition)
   {
-
+    _LinkedPortal.LaserForward(hitPosition);
   }
 
-  public void Forward() //todo: received data from another portal to project the same position.
+  private void LaserForward(Vector3 hitPosition)
   {
-
+    GameObject obj = ResourceLoadManager.LoadGameObject("Prefabs/Beam");
+    if (obj != null) Instantiate(obj, hitPosition + transform.position + new Vector3(0,0,OFFSET), Quaternion.identity);
   }
 }
