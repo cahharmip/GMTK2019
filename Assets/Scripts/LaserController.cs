@@ -6,7 +6,7 @@ public class LaserController : MonoBehaviour
 {
   private Vector3 _CurrentPosition;
   private Vector3 _CurrentHitPoint;
-
+  private GameObject _CurrentBeam;
   private void Update()
   {
     Physics.Raycast(transform.position, transform.forward, out RaycastHit hit);
@@ -14,11 +14,14 @@ public class LaserController : MonoBehaviour
     {
       if (_CurrentPosition != transform.position || _CurrentHitPoint != hit.point)
       {
-        LineRenderer line = Instantiate(ResourceLoadManager.LoadGameObject("Prefabs/LaserBeam"), transform.position, Quaternion.identity).GetComponent<LineRenderer>();
+        if (_CurrentBeam != null) Destroy(_CurrentBeam);
+        GameObject lineObj = Instantiate(ResourceLoadManager.LoadGameObject("Prefabs/LaserBeam"), transform.position, Quaternion.identity);
+        LineRenderer line = lineObj.GetComponent<LineRenderer>();
         line.SetPosition(0, transform.position);
         line.SetPosition(1, hit.point);
         _CurrentPosition = transform.position;
         _CurrentHitPoint = hit.point;
+        _CurrentBeam = lineObj;
       }
     }
 
