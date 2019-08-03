@@ -24,6 +24,6 @@ public class PlayerMovement : MonoBehaviour
   {
     movement.Set(h, 0f, v);
     movement = Quaternion.Euler(0, -45, 0) * movement.normalized * speed * Time.deltaTime;
-    playerRigidbody.MovePosition(transform.position + movement);
+    playerRigidbody.velocity = movement;
   }
 }
