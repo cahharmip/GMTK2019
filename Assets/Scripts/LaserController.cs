@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class LaserController : MonoBehaviour
 {
-  private IEnumerator Start()
+  private void Update()
   {
     Physics.Raycast(transform.position, transform.forward, out RaycastHit hit);
-     yield return new WaitForSeconds(1f);
     if (hit.collider)
     {
       LineRenderer line = Instantiate(ResourceLoadManager.LoadGameObject("Prefabs/LaserBeam"), transform.position, Quaternion.identity).GetComponent<LineRenderer>();
@@ -18,7 +17,6 @@ public class LaserController : MonoBehaviour
      {
        Transform wall = hit.collider.transform;
        Vector3 localHitPosition = hit.point - wall.position;
-       Debug.DrawRay(transform.position, hit.collider.transform.position, Color.red, 1000f);
        wall.GetComponent<Portal>().Received(localHitPosition);
      }
      else if (hit.collider.tag.Equals("Player"))
