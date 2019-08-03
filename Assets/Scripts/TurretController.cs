@@ -42,7 +42,7 @@ public class TurretController : MonoBehaviour
 
   private void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.tag.Equals("Wall"))
+    if (collision.gameObject.tag.Equals("Wall") || collision.gameObject.tag.Equals("Turret"))
     {
       if (direction == Direction.LEFT) direction = Direction.RIGHT;
       else if (direction == Direction.RIGHT) direction = Direction.LEFT;

@@ -23,17 +23,16 @@ public class LaserController : MonoBehaviour
         _CurrentHitPoint = hit.point;
         _CurrentBeam = lineObj;
       }
-    }
-
-    if (hit.collider.tag.Equals("Wall"))
-    {
-      Transform wall = hit.collider.transform;
-      Vector3 localHitPosition = hit.point - wall.position;
-      wall.GetComponent<Portal>().Received(localHitPosition);
-    }
-    else if (hit.collider.tag.Equals("Player"))
-    {
-      Debug.Log("<color=red>You're ded. noob xD</color>");
+      if (hit.collider.tag.Equals("Wall"))
+      {
+        Transform wall = hit.collider.transform;
+        Vector3 localHitPosition = hit.point - wall.position;
+        wall.GetComponent<Portal>().Received(localHitPosition);
+      }
+      else if (hit.collider.tag.Equals("Player"))
+      {
+        Debug.Log("<color=red>You're ded. noob xD</color>");
+      }
     }
   }
 }
