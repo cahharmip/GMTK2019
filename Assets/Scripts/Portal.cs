@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField]
+  private Portal _LinkedPortal;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  public void SetupPortal() //todo: received data from another portal to project the same position.
+  {
+
+  }
 }
