@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 4560986669639787295, guid: bf81ab84d45a22f4eb1259c1dab19b7e,
         type: 3}
       propertyPath: m_Name
-      value: DangerWall
+      value: DangerWall Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4560986669639787363, guid: bf81ab84d45a22f4eb1259c1dab19b7e,
         type: 3}
@@ -79,6 +79,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4560986669639787361, guid: bf81ab84d45a22f4eb1259c1dab19b7e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cef15b7f11416f540a8bd00f3e11af33, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf81ab84d45a22f4eb1259c1dab19b7e, type: 3}
 --- !u!1 &1251581208865328832 stripped
