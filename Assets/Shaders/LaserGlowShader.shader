@@ -1,4 +1,4 @@
-﻿Shader "Trail/Neon"
+﻿Shader "Custom/LaserGlowShader"
 {
     Properties
     {
@@ -6,6 +6,7 @@
     _Color("Tint", Color) = (1,1,1,1)
         _MainTexture("Sprite", 2D) = "white" {}
     [MaterialToggle] PixelSnap("Pixel snap", Float) = 0
+      _StencilMask("Stencil mask", Int) = 0
     }
 
         SubShader
@@ -23,9 +24,16 @@
         Lighting Off
         ZWrite Off
         Blend One OneMinusSrcAlpha
-
         Pass
     {
+
+      Stencil {
+        Ref[_StencilMask]
+        Comp equal
+        Pass keep
+        Fail keep
+      }
+
         CGPROGRAM
 #pragma vertex vert
 #pragma fragment frag
