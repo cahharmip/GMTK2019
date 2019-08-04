@@ -11,26 +11,32 @@ public class PressurePlate : MonoBehaviour
     TurretController[] tCtrl;
 
 
-    // Start is called before the first frame update
-    void Start()
+  // Start is called before the first frame update
+  void Start()
+  {
+    Debug.Log("start");
+    tCtrl = new TurretController[turrets.Length];
+    for (int i = 0; i < turrets.Length; i++)
     {
-        Debug.Log("start");
-        tCtrl = new TurretController[turrets.Length];
-        for (int i = 0; i < turrets.Length; i++)
-        {
-            tCtrl[i] = turrets[i].GetComponent<TurretController>();
-        }
+      tCtrl[i] = turrets[i].GetComponent<TurretController>();
     }
+  }
 
-    // Update is called once per frame
-    void Update()
-    {
+  // Update is called once per frame
+  void Update()
+  {
+    Move();
+  }
 
-    }
+  private void Move()
+  {
 
-    void OnTriggerEnter(Collider cd)
-    {
-        Debug.Log("enter");
+  }
+
+  void OnTriggerEnter(Collider cd)
+  {
+    Debug.Log("enter");
+    this.gameObject.SetActive(false);
         if(door1 != null)
         {
             door1.transform.position += doorMovement;
@@ -43,22 +49,18 @@ public class PressurePlate : MonoBehaviour
         {
             AllShouldJump();
         }
-    }
-
-    //void OnTriggerExit(Collider cd)
-    //{
-    //    Debug.Log("exit");
-    //    if (door != null)
-    //    {
-    //        door.transform.position -= doorMovement;
-    //    }
-    //}
-
-    void AllShouldJump()
+    
+    if(turrets.Length > 0)
     {
-        for (int i = 0; i < turrets.Length; i++)
-        {
-            tCtrl[i].shouldJump = true;
-        }
+      AllShouldJump();
     }
+  }
+
+  void AllShouldJump()
+  {
+    for (int i = 0; i < turrets.Length; i++)
+    {
+      tCtrl[i].shouldJump = true;
+    }
+  }
 }

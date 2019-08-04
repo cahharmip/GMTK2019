@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4867349551521674262}
   - component: {fileID: 4867349551521674345}
   m_Layer: 0
-  m_Name: plate_2
+  m_Name: Switch
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 492871285ba4a4a1191913cc1d0a9dd0, type: 2}
+  - {fileID: 2100000, guid: 1b7e6b8b637b44448b172edf6a8d3096, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
