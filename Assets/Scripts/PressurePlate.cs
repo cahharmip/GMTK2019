@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject door;
+    public GameObject door1;
+    public GameObject door2;
     public Vector3 doorMovement = new Vector3(0, 0, 0.15f);
     public GameObject[] turrets;
     TurretController[] tCtrl;
@@ -30,9 +31,13 @@ public class PressurePlate : MonoBehaviour
     void OnTriggerEnter(Collider cd)
     {
         Debug.Log("enter");
-        if(door != null)
+        if(door1 != null)
         {
-            door.transform.position += doorMovement;
+            door1.transform.position += doorMovement;
+        }
+        if(door2 != null)
+        {
+            door2.transform.position += doorMovement;
         }
         if(turrets.Length > 0)
         {
@@ -40,14 +45,14 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider cd)
-    {
-        Debug.Log("exit");
-        if (door != null)
-        {
-            door.transform.position -= doorMovement;
-        }
-    }
+    //void OnTriggerExit(Collider cd)
+    //{
+    //    Debug.Log("exit");
+    //    if (door != null)
+    //    {
+    //        door.transform.position -= doorMovement;
+    //    }
+    //}
 
     void AllShouldJump()
     {
