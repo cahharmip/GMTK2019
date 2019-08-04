@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
   protected void Awake()
   {
     _MainCamera.transform.position = OriginCameraPosition;
-    if (SceneManager.GetActiveScene().name == "Stage1")
+    if (SceneManager.GetActiveScene().name == "Stage0")
     {
       Button playButton = _IntroCanvas.transform.Find("Button").GetComponent<Button>();
       playButton.onClick.AddListener(OnPlayButtonClicked);
@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
   protected void Start()
   {
-    if (SceneManager.GetActiveScene().name != "Stage1")
+    if (SceneManager.GetActiveScene().name != "Stage0")
     {
       StartCoroutine(DoCloseIntroUI());
     }
