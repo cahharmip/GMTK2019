@@ -51,7 +51,7 @@ public class LaserController : MonoBehaviour
   {
       laserVertices = 0;
       laser.SetPosition(laserVertices++, transform.position);
-      CastLaser(transform.position, transform.forward, 25);
+      CastLaser(transform.position, transform.forward, 2);
   }
 
   private void CastLaser(Vector3 start, Vector3 direction, int limit)
@@ -60,7 +60,7 @@ public class LaserController : MonoBehaviour
     Physics.Raycast(start, direction, out RaycastHit hit);
     if (hit.collider)
     {
-      if (hit.collider.tag.Equals("Wall"))
+      if (hit.collider.tag.Equals("Reflector"))
       {
         // Transform portal = hit.collider.transform;
         // Transform nextPortal = portal.GetComponent<Portal>().linkedPortal.transform;
@@ -69,10 +69,14 @@ public class LaserController : MonoBehaviour
 
         Debug.Log("Reflected: " + direction + " to " + nextDirection);
 
-        laser.positionCount = laserVertices + 1;
-        laser.SetPosition(laserVertices++, hit.point);
-
         limit -= 1;
+
+        if (limit > 0)
+        {
+          laser.positionCount = laserVertices + 1;
+          laser.SetPosition(laserVertices++, hit.point);
+        }
+
         CastLaser(nextStart, nextDirection, limit);
       }
       else if (hit.collider.tag.Equals("Player"))
