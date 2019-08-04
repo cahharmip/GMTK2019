@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
   [SerializeField]
   private Camera _MainCamera;
 
-  private Vector3 PlayCameraPosition = new Vector3(8.46f, 11.85f, -8.32f);
+  private Vector3 PlayCameraPosition = new Vector3(8.46f, 8.2f, -8.32f);
   private Vector3 OriginCameraPosition = new Vector3(-0.93f, 25.12f, 1.07f);
   protected void Awake()
   {
