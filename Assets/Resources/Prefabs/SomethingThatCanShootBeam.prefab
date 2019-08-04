@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 591248820551506331}
   - component: {fileID: 8201569003199489182}
   - component: {fileID: 9116202268975909160}
+  - component: {fileID: 7412306120513624272}
   m_Layer: 0
   m_Name: SomethingThatCanShootBeam
   m_TagString: Turret
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  step: 1
 --- !u!54 &9116202268975909160
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,6 +113,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!65 &7412306120513624272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925306170777068563}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8256654452442127058
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e786f49140a89c44b0f01e985280aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showLaserOnMainPlane: 0
 --- !u!1001 &2922983300519472076
 PrefabInstance:
   m_ObjectHideFlags: 0
