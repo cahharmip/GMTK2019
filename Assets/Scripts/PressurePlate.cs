@@ -16,11 +16,11 @@ public class PressurePlate : MonoBehaviour
   {
     if (tCtrl != null)
     {
-      tCtrl = new TurretController[turrets.Length];
-      for (int i = 0; i < turrets.Length; i++)
-      {
-        tCtrl[i] = turrets[i].GetComponent<TurretController>();
-      }
+    tCtrl = new TurretController[turrets.Length];
+    for (int i = 0; i < turrets.Length; i++)
+    {
+      tCtrl[i] = turrets[i].GetComponent<TurretController>();
+    }
     }
   }
 
@@ -62,7 +62,7 @@ public class PressurePlate : MonoBehaviour
   {
     for (int i = 0; i < turrets.Length; i++)
     {
-      tCtrl[i].shouldJump = true;
+      if(tCtrl != null) tCtrl[i].shouldJump = true;
     }
   }
 }
