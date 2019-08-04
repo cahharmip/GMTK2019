@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserController : MonoBehaviour
 {
+  public bool showLaserOnMainPlane = false;
   private Vector3 _CurrentPosition;
   private Vector3 _CurrentHitPoint;
   private LineRenderer laser;
@@ -49,9 +50,16 @@ public class LaserController : MonoBehaviour
 
   private void CastLaser()
   {
-      laserVertices = 0;
-      laser.SetPosition(laserVertices++, transform.position);
+    laserVertices = 0;
+    laser.SetPosition(laserVertices++, transform.position);
+    if (showLaserOnMainPlane)
+    {
+      CastLaser(transform.position, transform.forward, 3);
+    }
+    else
+    {
       CastLaser(transform.position, transform.forward, 2);
+    }
   }
 
   private void CastLaser(Vector3 start, Vector3 direction, int limit)
