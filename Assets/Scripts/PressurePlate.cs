@@ -46,7 +46,7 @@ public class PressurePlate : MonoBehaviour
   {
     for (int i = 0; i < tCtrl.Length; i++)
     {
-            tCtrl[i].shouldJump = true;
+        tCtrl[i].shouldJump = true;
     }
   }
 }

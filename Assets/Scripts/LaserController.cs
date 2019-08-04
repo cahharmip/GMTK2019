@@ -53,7 +53,7 @@ public class LaserController : MonoBehaviour
       else if (hit.collider.tag.Equals("Player"))
       {
         hit.collider.gameObject.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().DoRestart();
       }
       else
       {

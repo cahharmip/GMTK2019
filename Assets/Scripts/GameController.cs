@@ -58,6 +58,12 @@ public class GameController : MonoBehaviour
     _MainCamera.transform.position = new Vector3(PlayCameraPosition.x, PlayCameraPosition.y, PlayCameraPosition.z);
   }
 
+  public void DoRestart()
+  {
+    GameObject obj = Instantiate(ResourceLoadManager.LoadGameObject("Prefabs/CanvasRestart"));
+    obj.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() => { SceneManager.LoadScene(SceneManager.GetActiveScene().name); });
+  }
+
   private IEnumerator DoIntroStage()
   {
     yield return null;
