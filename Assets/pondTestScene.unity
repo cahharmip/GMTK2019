@@ -16153,7 +16153,7 @@ PrefabInstance:
     - target: {fileID: 8201569003199489182, guid: f08e2b9d9e89f714183ad1d78c2342d1,
         type: 3}
       propertyPath: speed
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08e2b9d9e89f714183ad1d78c2342d1, type: 3}
@@ -16407,6 +16407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret_1_2
       objectReference: {fileID: 0}
+    - target: {fileID: 3925306170777068563, guid: f08e2b9d9e89f714183ad1d78c2342d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1470533589387121417, guid: f08e2b9d9e89f714183ad1d78c2342d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16536,7 +16541,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021829263}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 24cf14558f50d42a79ddba7989dd6aa1, type: 2}
   m_CullingMode: 0
@@ -21656,7 +21661,7 @@ PrefabInstance:
     - target: {fileID: 3261795991706437296, guid: 1e24ec219bd70894f9b654904de7fbff,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5397159267974229365, guid: 1e24ec219bd70894f9b654904de7fbff,
         type: 3}

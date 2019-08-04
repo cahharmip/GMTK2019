@@ -4,34 +4,51 @@ using UnityEngine;
 
 public class TurretController : MonoBehaviour
 {
-  public float speed = 0f;
-  private Vector3 _CurrentDirection;
+  public float speed = 100f;
+  public float step = 1f;
+  private Vector3 _currentDirection;
+  private Vector3 _targetPosition;
+  private Vector3 _startMarker;
+  private float _startTime;
+  private float _journeyLength;
 
   void Awake()
   {
-    _CurrentDirection = transform.right;
+    _currentDirection = transform.right;
+    CalculateNewTargetPosition();
   }
 
-  void FixedUpdate()
+  void Update()
   {
     Move();
   }
 
   void Move()
   {
-    transform.position += _CurrentDirection * speed * Time.deltaTime;
+    float distCovered = (Time.time - _startTime) * speed;
+    float fracJourney = distCovered / _journeyLength;
+    transform.position = Vector3.Lerp(_startMarker, _targetPosition, fracJourney);
   }
 
   private void OnCollisionEnter(Collision collision)
   {
     if (collision.gameObject.tag.Equals("Wall") || collision.gameObject.tag.Equals("Turret"))
     {
-      _CurrentDirection = -_CurrentDirection;
+      _currentDirection = -_currentDirection;
+      CalculateNewTargetPosition();
     }
   }
 
   public void Jump()
-    {
-        Debug.Log("JUMP");
-    }
+  {
+    CalculateNewTargetPosition();
+  }
+  private void CalculateNewTargetPosition()
+  {
+    _startTime = Time.time;
+    _targetPosition = transform.position + (_currentDirection.normalized * step);
+    _startMarker = transform.position;
+    _journeyLength = Vector3.Distance(transform.position, _targetPosition);
+
+  }
 }
