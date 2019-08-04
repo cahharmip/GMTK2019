@@ -29,4 +29,9 @@ public class TurretController : MonoBehaviour
       _CurrentDirection = -_CurrentDirection;
     }
   }
+
+  public void Jump()
+    {
+        Debug.Log("JUMP");
+    }
 }
