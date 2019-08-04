@@ -86,10 +86,10 @@ public class TurretController : MonoBehaviour
         _currentDirection = transform.right;
         break;
       case Direction.UP:
-        _currentDirection = transform.up;
+        _currentDirection = transform.forward;
         break;
       case Direction.DOWN:
-        _currentDirection = -transform.up;
+        _currentDirection = -transform.forward;
         break;
     }
     _started = true;
