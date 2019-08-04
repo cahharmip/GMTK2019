@@ -6,6 +6,7 @@ public class TurretController : MonoBehaviour
 {
   public float speed = 100f;
   public float step = 1f;
+  public bool startWithGoingRight = true;
   private Vector3 _currentDirection;
   private Vector3 _targetPosition;
   private Vector3 _startMarker;
@@ -33,9 +34,10 @@ public class TurretController : MonoBehaviour
 
   private void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.tag.Equals("Wall") || collision.gameObject.tag.Equals("Turret"))
+    if (collision.gameObject.tag.Equals("Wall") || collision.gameObject.tag.Equals("GlassWall") || collision.gameObject.tag.Equals("Turret"))
     {
-      _currentDirection = -_currentDirection;
+      _currentDirection = collision.gameObject.transform.position - transform.position;
+      _currentDirection = -_currentDirection.normalized;
     }
   }
 

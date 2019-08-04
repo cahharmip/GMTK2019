@@ -6,7 +6,7 @@ public abstract class ObstracleBase : MonoBehaviour
 {
   protected void OnCollisionEnter(Collision col)
   {
-    gameObject.GetComponent<Renderer>().material.color = new Color(0.4f,0f,0f);
+    //gameObject.GetComponent<Renderer>().material.color = new Color(0.4f,0f,0f);
     OnCollisionEvent(col);
   }
 

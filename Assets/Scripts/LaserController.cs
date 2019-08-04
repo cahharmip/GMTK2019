@@ -27,7 +27,7 @@ public class LaserController : MonoBehaviour
     laser.SetPosition(laserVertices++, transform.position);
     if (showLaserOnMainPlane)
     {
-      CastLaser(transform.position, transform.forward, 3);
+      CastLaser(transform.position, transform.forward, 5);
     }
     else
     {
@@ -63,6 +63,16 @@ public class LaserController : MonoBehaviour
       else if (hit.collider.tag.Equals("Player"))
       {
         Debug.Log("<color=red>You're ded. noob xD</color>");
+      }
+      else if (hit.collider.tag.Equals("GlassWall"))
+      {
+        laser.positionCount = laserVertices + 1;
+        laser.SetPosition(laserVertices++, start + direction * 3f);
+      }
+      else
+      {
+        laser.positionCount = laserVertices + 1;
+        laser.SetPosition(laserVertices++, hit.point);
       }
     }
     else
