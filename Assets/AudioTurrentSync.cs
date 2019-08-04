@@ -12,18 +12,24 @@ public class AudioTurrentSync : MonoBehaviour
     BlockController[] bCtrl;
     float lastTrigger = 0;
 
-    void Start()
+    void Awake()
     {
-        tCtrl = new TurretController[turrets.Length];
-        for (int i =0;i< turrets.Length; i++)
+        if (turrets != null)
         {
+          tCtrl = new TurretController[turrets.Length];
+          for (int i = 0; i < turrets.Length; i++)
+          {
             tCtrl[i] = turrets[i].GetComponent<TurretController>();
+          }
         }
 
-        bCtrl = new BlockController[blocks.Length];
-        for (int i = 0; i < blocks.Length; i++)
+        if (blocks != null)
         {
+          bCtrl = new BlockController[blocks.Length];
+          for (int i = 0; i < blocks.Length; i++)
+          {
             bCtrl[i] = blocks[i].GetComponent<BlockController>();
+          }
         }
 
     }
@@ -42,15 +48,20 @@ public class AudioTurrentSync : MonoBehaviour
 
     void AllJump()
     {
-        for (int i = 0; i < turrets.Length; i++)
+        if (turrets != null)
         {
+          for (int i = 0; i < turrets.Length; i++)
+          {
             tCtrl[i].Jump();
-        }
-        for (int i = 0; i < bCtrl.Length; i++)
-        {
-            bCtrl[i].Jump();
+          }
         }
 
-        
+        if (bCtrl != null)
+        {
+          for (int i = 0; i < bCtrl.Length; i++)
+          {
+            bCtrl[i].Jump();
+          }
+        }
     }
 }
