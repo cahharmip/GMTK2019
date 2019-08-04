@@ -14,11 +14,13 @@ public class PressurePlate : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    Debug.Log("start");
-    tCtrl = new TurretController[turrets.Length];
-    for (int i = 0; i < turrets.Length; i++)
+    if (tCtrl != null)
     {
-      tCtrl[i] = turrets[i].GetComponent<TurretController>();
+      tCtrl = new TurretController[turrets.Length];
+      for (int i = 0; i < turrets.Length; i++)
+      {
+        tCtrl[i] = turrets[i].GetComponent<TurretController>();
+      }
     }
   }
 

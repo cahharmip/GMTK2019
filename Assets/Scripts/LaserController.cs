@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserController : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class LaserController : MonoBehaviour
       else if (hit.collider.tag.Equals("Player"))
       {
         hit.collider.gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
       }
       else
       {

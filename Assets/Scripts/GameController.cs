@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -14,12 +15,23 @@ public class GameController : MonoBehaviour
   private Camera _MainCamera;
 
   private Vector3 PlayCameraPosition = new Vector3(8.46f, 11.85f, -8.32f);
-  private Vector3 OriginCameraPosition;
+  private Vector3 OriginCameraPosition = new Vector3(-0.93f, 25.12f, 1.07f);
   protected void Awake()
   {
-    OriginCameraPosition = _MainCamera.transform.position;
-    Button playButton = _IntroCanvas.transform.Find("Button").GetComponent<Button>();
-    playButton.onClick.AddListener(OnPlayButtonClicked);
+    _MainCamera.transform.position = OriginCameraPosition;
+    if (SceneManager.GetActiveScene().name == "Stage1")
+    {
+      Button playButton = _IntroCanvas.transform.Find("Button").GetComponent<Button>();
+      playButton.onClick.AddListener(OnPlayButtonClicked);
+    }
+  }
+
+  protected void Start()
+  {
+    if (SceneManager.GetActiveScene().name != "Stage1")
+    {
+      StartCoroutine(DoCloseIntroUI());
+    }
   }
 
   private void OnPlayButtonClicked()
@@ -35,14 +47,14 @@ public class GameController : MonoBehaviour
     {
       time += Time.deltaTime;
       float fraction = 1 - Mathf.Pow(2, -(10 * (time/_IntroUIFadeTime)));
-      _IntroCanvas.GetComponent<CanvasGroup>().alpha = 1 - (time / Time.deltaTime);
+      if (_IntroCanvas != null) _IntroCanvas.GetComponent<CanvasGroup>().alpha = 1 - (time / Time.deltaTime);
       _MainCamera.transform.position = new Vector3(
         (OriginCameraPosition.x * (1 - fraction)) + PlayCameraPosition.x * fraction,
         (OriginCameraPosition.y * (1 - fraction)) + PlayCameraPosition.y * fraction,
         (OriginCameraPosition.z * (1 - fraction)) + PlayCameraPosition.z * fraction);
       yield return null;
     }
-    _IntroCanvas.GetComponent<CanvasGroup>().alpha = 0;
+    if (_IntroCanvas != null) _IntroCanvas.GetComponent<CanvasGroup>().alpha = 0;
     _MainCamera.transform.position = new Vector3(PlayCameraPosition.x, PlayCameraPosition.y, PlayCameraPosition.z);
   }
 
