@@ -10,11 +10,10 @@
       Tags { "RenderType" = "Opaque" }
       LOD 200
 
-      Stencil {
+      Stencil{
         Ref[_StencilMask]
-        Comp equal
-        Pass keep
-        Fail keep
+        Comp NotEqual
+        Pass Zero
       }
 
       CGPROGRAM
