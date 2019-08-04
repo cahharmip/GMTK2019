@@ -54,11 +54,6 @@ public class LaserController : MonoBehaviour
         hit.collider.gameObject.active = false;
         Debug.Log("<color=red>You're ded. noob xD</color>");
       }
-      else if (hit.collider.tag.Equals("GlassWall"))
-      {
-        laser.positionCount = laserVertices + 1;
-        laser.SetPosition(laserVertices++, start + direction * 3f);
-      }
       else
       {
         laser.positionCount = laserVertices + 1;

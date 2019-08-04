@@ -1047,7 +1047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51845105f1304905bf5fd84fbfd0b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 287493892}
   turrets:
   - {fileID: 1822055583}
   - {fileID: 832490518}
@@ -3866,6 +3865,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GlassWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2376051675331623124, guid: d017b959777fb4bd9b50da76f686a918,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4005110599133878795, guid: d017b959777fb4bd9b50da76f686a918,
         type: 3}
