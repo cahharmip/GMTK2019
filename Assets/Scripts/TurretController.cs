@@ -35,7 +35,6 @@ public class TurretController : MonoBehaviour
     if (collision.gameObject.tag.Equals("Wall") || collision.gameObject.tag.Equals("Turret"))
     {
       _currentDirection = -_currentDirection;
-      CalculateNewTargetPosition();
     }
   }
 
