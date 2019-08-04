@@ -23,6 +23,7 @@ public class TurretController : MonoBehaviour
   private float _startTime;
   private float _journeyLength;
   private bool _started = false;
+  public bool shouldJump = true;
 
   private void Start()
   {
@@ -68,8 +69,12 @@ public class TurretController : MonoBehaviour
 
   public void Jump()
   {
-    CalculateNewTargetPosition();
+        if (shouldJump)
+        {
+            CalculateNewTargetPosition();
+        }
   }
+
   private void CalculateNewTargetPosition()
   {
     _moveIdx += 1;
