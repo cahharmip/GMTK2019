@@ -24,17 +24,6 @@ public class PressurePlate : MonoBehaviour
     }
   }
 
-  // Update is called once per frame
-  void Update()
-  {
-    Move();
-  }
-
-  private void Move()
-  {
-
-  }
-
   void OnTriggerEnter(Collider cd)
   {
     Debug.Log("enter");
@@ -47,7 +36,7 @@ public class PressurePlate : MonoBehaviour
         {
             door2.transform.position += doorMovement;
         }
-        if(tCtrl.Length > 0)
+        if(tCtrl != null)
         {
             AllShouldJump();
         }
