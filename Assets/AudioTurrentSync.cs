@@ -25,7 +25,7 @@ public class AudioTurrentSync : MonoBehaviour
     {
         float timing = audioSource.time;
 
-        if(timing-lastTrigger > 1)
+        if(timing-lastTrigger >= 0.875)
         {
             AllJump();
             lastTrigger = timing;
