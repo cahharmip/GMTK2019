@@ -5,12 +5,20 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     public GameObject door;
-    Vector3 doorMovement = new Vector3(0, 0, 0.15f);
+    public Vector3 doorMovement = new Vector3(0, 0, 0.15f);
+    public GameObject[] turrets;
+    TurretController[] tCtrl;
+
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("start");
+        tCtrl = new TurretController[turrets.Length];
+        for (int i = 0; i < turrets.Length; i++)
+        {
+            tCtrl[i] = turrets[i].GetComponent<TurretController>();
+        }
     }
 
     // Update is called once per frame
@@ -21,13 +29,31 @@ public class PressurePlate : MonoBehaviour
 
     void OnTriggerEnter(Collider cd)
     {
-        door.transform.position += doorMovement;
         Debug.Log("enter");
+        if(door != null)
+        {
+            door.transform.position += doorMovement;
+        }
+        if(turrets.Length > 0)
+        {
+            AllShouldJump();
+        }
     }
 
     void OnTriggerExit(Collider cd)
     {
-        door.transform.position -= doorMovement;
         Debug.Log("exit");
+        if (door != null)
+        {
+            door.transform.position -= doorMovement;
+        }
+    }
+
+    void AllShouldJump()
+    {
+        for (int i = 0; i < turrets.Length; i++)
+        {
+            tCtrl[i].shouldJump = true;
+        }
     }
 }
