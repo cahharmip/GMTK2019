@@ -95,10 +95,10 @@ public class BlockController : MonoBehaviour
         _currentDirection = -transform.forward;
         break;
       case Direction.IN:
-        _currentDirection = transform.up;
+        _currentDirection = -transform.up;
         break;
       case Direction.OUT:
-        _currentDirection = -transform.up;
+        _currentDirection = transform.up;
         break;
     }
     _started = true;

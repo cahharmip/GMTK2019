@@ -2239,7 +2239,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2254,7 +2254,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2269,7 +2269,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2279,7 +2279,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2316,6 +2316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3bcf8a1106946ffba069b853752d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 100
+  step: 1
+  moveSet: LR
+  shouldJump: 1
 --- !u!114 &1640459248 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7023322262438869643, guid: cd5d6d4190dccdb44a95f70371fc1438,
@@ -2631,7 +2635,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2646,7 +2650,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2661,7 +2665,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2671,7 +2675,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2708,6 +2712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3bcf8a1106946ffba069b853752d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 100
+  step: 1
+  moveSet: UD
+  shouldJump: 1
 --- !u!1001 &1984573073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2914,7 +2922,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2929,7 +2937,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2944,7 +2952,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2954,7 +2962,7 @@ PrefabInstance:
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 33156845344005055, guid: 29667d25dc36d42fcbbd87018f8c8828,
         type: 3}
@@ -2991,6 +2999,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3bcf8a1106946ffba069b853752d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 100
+  step: 1
+  moveSet: LLLLLLIIIIIIIIIIIRRRRRRRRRRRLLLLL
+  shouldJump: 1
 --- !u!1001 &2029954634
 PrefabInstance:
   m_ObjectHideFlags: 0
