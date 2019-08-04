@@ -51,8 +51,7 @@ public class LaserController : MonoBehaviour
       }
       else if (hit.collider.tag.Equals("Player"))
       {
-        hit.collider.gameObject.active = false;
-        Debug.Log("<color=red>You're ded. noob xD</color>");
+        hit.collider.gameObject.SetActive(false);
       }
       else
       {
