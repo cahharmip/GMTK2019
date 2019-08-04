@@ -14,25 +14,14 @@ public class PressurePlate : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    if (tCtrl != null)
+    if (turrets.Length > 0)
     {
-      tCtrl = new TurretController[turrets.Length];
-      for (int i = 0; i < turrets.Length; i++)
-      {
-        tCtrl[i] = turrets[i].GetComponent<TurretController>();
-      }
+    tCtrl = new TurretController[turrets.Length];
+    for (int i = 0; i < turrets.Length; i++)
+    {
+      tCtrl[i] = turrets[i].GetComponent<TurretController>();
     }
-  }
-
-  // Update is called once per frame
-  void Update()
-  {
-    Move();
-  }
-
-  private void Move()
-  {
-
+    }
   }
 
   void OnTriggerEnter(Collider cd)
@@ -47,22 +36,17 @@ public class PressurePlate : MonoBehaviour
         {
             door2.transform.position += doorMovement;
         }
-        if(turrets.Length > 0)
+        if(tCtrl != null)
         {
             AllShouldJump();
         }
-    
-    if(turrets.Length > 0)
-    {
-      AllShouldJump();
-    }
   }
 
   void AllShouldJump()
   {
-    for (int i = 0; i < turrets.Length; i++)
+    for (int i = 0; i < tCtrl.Length; i++)
     {
-      tCtrl[i].shouldJump = true;
+            tCtrl[i].shouldJump = true;
     }
   }
 }
