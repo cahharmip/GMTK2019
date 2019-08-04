@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioTurrentSync : MonoBehaviour
 {
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
     public GameObject[] turrets;
 
     TurretController[] tCtrl;
@@ -23,9 +23,9 @@ public class AudioTurrentSync : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float timing = audioSource.time;
+        float timing = Time.time;
 
-        if(timing-lastTrigger >= 0.857125 || lastTrigger- timing > 2.6)
+        if(timing-lastTrigger >= 0.857125)
         {
             AllJump();
             lastTrigger = timing;
