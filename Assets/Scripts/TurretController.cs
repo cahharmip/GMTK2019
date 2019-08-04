@@ -11,11 +11,11 @@ public class TurretController : MonoBehaviour
   private Vector3 _startMarker;
   private float _startTime;
   private float _journeyLength;
+  private bool _started = false;
 
   void Awake()
   {
     _currentDirection = transform.right;
-    CalculateNewTargetPosition();
   }
 
   void Update()
@@ -25,6 +25,7 @@ public class TurretController : MonoBehaviour
 
   void Move()
   {
+    if (!_started) return;
     float distCovered = (Time.time - _startTime) * speed;
     float fracJourney = distCovered / _journeyLength;
     transform.position = Vector3.Lerp(_startMarker, _targetPosition, fracJourney);
@@ -44,6 +45,7 @@ public class TurretController : MonoBehaviour
   }
   private void CalculateNewTargetPosition()
   {
+    _started = true;
     _startTime = Time.time;
     _targetPosition = transform.position + (_currentDirection.normalized * step);
     _startMarker = transform.position;
