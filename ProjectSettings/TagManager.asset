@@ -8,6 +8,7 @@ TagManager:
   - Turret
   - Reflector
   - GlassWall
+  - Controller
   layers:
   - Default
   - TransparentFX
