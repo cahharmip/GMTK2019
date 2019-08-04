@@ -21,8 +21,9 @@ public class GameController : MonoBehaviour
     _MainCamera.transform.position = OriginCameraPosition;
     if (SceneManager.GetActiveScene().name == "Stage0")
     {
-      Button playButton = _IntroCanvas.transform.Find("Button").GetComponent<Button>();
-      playButton.onClick.AddListener(OnPlayButtonClicked);
+      //Button playButton = _IntroCanvas.transform.Find("Button").GetComponent<Button>();
+      //playButton.onClick.AddListener(OnPlayButtonClicked);
+      StartCoroutine(DoCloseIntroUI());
     }
   }
 
@@ -32,13 +33,13 @@ public class GameController : MonoBehaviour
     {
       StartCoroutine(DoCloseIntroUI());
     }
-  }
+  }   
 
-  private void OnPlayButtonClicked()
-  {
-    _IntroCanvas.GetComponent<CanvasGroup>().interactable = false;
-    StartCoroutine(DoCloseIntroUI());
-  }
+  //private void OnPlayButtonClicked()
+  //{
+  //  _IntroCanvas.GetComponent<CanvasGroup>().interactable = false;
+  //  StartCoroutine(DoCloseIntroUI());
+  //}
 
   private IEnumerator DoCloseIntroUI()
   {
