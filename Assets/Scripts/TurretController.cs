@@ -36,8 +36,11 @@ public class TurretController : MonoBehaviour
   {
     if (collision.gameObject.tag.Equals("Wall") || collision.gameObject.tag.Equals("GlassWall") || collision.gameObject.tag.Equals("Turret"))
     {
-      _currentDirection = collision.gameObject.transform.position - transform.position;
-      _currentDirection = -_currentDirection.normalized;
+      if (collision.contactCount > 2)
+      {
+        _currentDirection = collision.gameObject.transform.position - transform.position;
+        _currentDirection = -_currentDirection.normalized;
+      }
     }
   }
 
