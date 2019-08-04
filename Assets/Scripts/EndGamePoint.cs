@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EngGamePoint : MonoBehaviour
+public class EndGamePoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+  protected void OnCollisionEnter(Collision collision)
+  {
+    if (collision.gameObject.name.Equals("Player"))
     {
-        
+      Instantiate(ResourceLoadManager.LoadGameObject("Prefabs/CanvasEndLastStage"));
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  }
 }
