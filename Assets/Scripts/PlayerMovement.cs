@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
   void Move(float h, float v)
   {
     movement.Set(h, 0f, v);
-    movement = Quaternion.Euler(0, -45, 0) * movement.normalized * speed * Time.deltaTime;
+    float camRot = Camera.main.transform.rotation.eulerAngles.y;
+    movement = Quaternion.Euler(0, camRot, 0) * movement.normalized * speed * Time.deltaTime;
     playerRigidbody.velocity = movement;
   }
 }
