@@ -7,7 +7,9 @@ public  enum Direction
   LEFT,
   RIGHT,
   UP,
-  DOWN
+  DOWN,
+  IN,
+  OUT
 }
 
 public class TurretController : MonoBehaviour
@@ -49,6 +51,12 @@ public class TurretController : MonoBehaviour
           break;
         case 'D':
           moves[i] = Direction.DOWN;
+          break;
+        case 'I':
+          moves[i] = Direction.IN;
+          break;
+        case 'O':
+          moves[i] = Direction.OUT;
           break;
       }
     }
@@ -95,6 +103,12 @@ public class TurretController : MonoBehaviour
         break;
       case Direction.DOWN:
         _currentDirection = -transform.forward;
+        break;
+      case Direction.IN:
+        _currentDirection = transform.up;
+        break;
+      case Direction.OUT:
+        _currentDirection = -transform.up;
         break;
     }
     _started = true;
