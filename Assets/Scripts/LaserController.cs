@@ -25,14 +25,7 @@ public class LaserController : MonoBehaviour
   {
     laserVertices = 0;
     laser.SetPosition(laserVertices++, transform.position);
-    if (showLaserOnMainPlane)
-    {
-      CastLaser(transform.position, transform.forward, 5);
-    }
-    else
-    {
-      CastLaser(transform.position, transform.forward, 2);
-    }
+    CastLaser(transform.position, transform.forward, 5);
   }
 
   private void CastLaser(Vector3 start, Vector3 direction, int limit)
