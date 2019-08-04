@@ -505,6 +505,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_4
       objectReference: {fileID: 0}
+    - target: {fileID: 2189399985882256709, guid: ff18d989703969542be6af67ea01c5ce,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1218254206}
     - target: {fileID: 1286551068147255023, guid: ff18d989703969542be6af67ea01c5ce,
         type: 3}
       propertyPath: _LinkedPortal
@@ -520,11 +525,6 @@ PrefabInstance:
       propertyPath: _LinkedPortal
       value: 
       objectReference: {fileID: 1673380564}
-    - target: {fileID: 2189399985882256709, guid: ff18d989703969542be6af67ea01c5ce,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1218254206}
     - target: {fileID: 2861502467801534230, guid: ff18d989703969542be6af67ea01c5ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1423,16 +1423,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_5
       objectReference: {fileID: 0}
-    - target: {fileID: 4654771481847862486, guid: 77325d99f00fd9140b3c3bee4b7479c1,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1110233578}
     - target: {fileID: 5702087979929552764, guid: 77325d99f00fd9140b3c3bee4b7479c1,
         type: 3}
       propertyPath: _LinkedPortal
       value: 
       objectReference: {fileID: 333708339}
+    - target: {fileID: 4654771481847862486, guid: 77325d99f00fd9140b3c3bee4b7479c1,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1110233578}
     - target: {fileID: 5529975464022382501, guid: 77325d99f00fd9140b3c3bee4b7479c1,
         type: 3}
       propertyPath: _LinkedPortal
@@ -1757,6 +1757,11 @@ PrefabInstance:
       propertyPath: linkedPortal
       value: 
       objectReference: {fileID: 984164862}
+    - target: {fileID: 7984647583988590881, guid: cd5d6d4190dccdb44a95f70371fc1438,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1162404799}
     - target: {fileID: 7023322262438869643, guid: cd5d6d4190dccdb44a95f70371fc1438,
         type: 3}
       propertyPath: _LinkedPortal
@@ -1767,11 +1772,6 @@ PrefabInstance:
       propertyPath: _LinkedPortal
       value: 
       objectReference: {fileID: 61201080}
-    - target: {fileID: 7984647583988590881, guid: cd5d6d4190dccdb44a95f70371fc1438,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1162404799}
     - target: {fileID: 3493048293784887369, guid: cd5d6d4190dccdb44a95f70371fc1438,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2138,16 +2138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_3
       objectReference: {fileID: 0}
-    - target: {fileID: 7149212775910455423, guid: 276c0be10510647469109e2dd69dc1b6,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1751709970}
-    - target: {fileID: 8003004593717164812, guid: 276c0be10510647469109e2dd69dc1b6,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1960377177}
     - target: {fileID: 6964977937074645158, guid: 276c0be10510647469109e2dd69dc1b6,
         type: 3}
       propertyPath: _LinkedPortal
@@ -2158,6 +2148,16 @@ PrefabInstance:
       propertyPath: _LinkedPortal
       value: 
       objectReference: {fileID: 1439549961}
+    - target: {fileID: 7149212775910455423, guid: 276c0be10510647469109e2dd69dc1b6,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1751709970}
+    - target: {fileID: 8003004593717164812, guid: 276c0be10510647469109e2dd69dc1b6,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1960377177}
     - target: {fileID: 6448244762929754869, guid: 276c0be10510647469109e2dd69dc1b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2440,6 +2440,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2722048643644233670, guid: 9f0ed8e8b159acb44b38660e4355cae0,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1066378629}
     - target: {fileID: 2496934913255802941, guid: 9f0ed8e8b159acb44b38660e4355cae0,
         type: 3}
       propertyPath: _LinkedPortal
@@ -2450,11 +2455,6 @@ PrefabInstance:
       propertyPath: _LinkedPortal
       value: 
       objectReference: {fileID: 802794713}
-    - target: {fileID: 2722048643644233670, guid: 9f0ed8e8b159acb44b38660e4355cae0,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1066378629}
     - target: {fileID: 3251060022699023255, guid: 9f0ed8e8b159acb44b38660e4355cae0,
         type: 3}
       propertyPath: _LinkedPortal
@@ -3607,21 +3607,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_2
       objectReference: {fileID: 0}
-    - target: {fileID: 4045754226749541791, guid: 1e24ec219bd70894f9b654904de7fbff,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1213832346}
-    - target: {fileID: 4559091749169697380, guid: 1e24ec219bd70894f9b654904de7fbff,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 830690870}
-    - target: {fileID: 3702623724238508311, guid: 1e24ec219bd70894f9b654904de7fbff,
-        type: 3}
-      propertyPath: _LinkedPortal
-      value: 
-      objectReference: {fileID: 1863554}
     - target: {fileID: 3530211899444314574, guid: 1e24ec219bd70894f9b654904de7fbff,
         type: 3}
       propertyPath: _LinkedPortal
@@ -3632,6 +3617,21 @@ PrefabInstance:
       propertyPath: linkedPortal
       value: 
       objectReference: {fileID: 67438101}
+    - target: {fileID: 4559091749169697380, guid: 1e24ec219bd70894f9b654904de7fbff,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 830690870}
+    - target: {fileID: 3702623724238508311, guid: 1e24ec219bd70894f9b654904de7fbff,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1863554}
+    - target: {fileID: 4045754226749541791, guid: 1e24ec219bd70894f9b654904de7fbff,
+        type: 3}
+      propertyPath: _LinkedPortal
+      value: 
+      objectReference: {fileID: 1213832346}
     - target: {fileID: 660203948418489245, guid: 1e24ec219bd70894f9b654904de7fbff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3738,9 +3738,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2051136868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b93c187fde3f3d4d90f464c3028ad89, type: 3}
+  m_Script: {fileID: 11500000, guid: 897dec00ec2dec34b851b13d5b96b538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Stage: Stage2
 --- !u!65 &2051136870
 BoxCollider:
   m_ObjectHideFlags: 0
