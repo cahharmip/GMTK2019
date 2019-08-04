@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3851036182112395002}
   - component: {fileID: 8201569003199489182}
   - component: {fileID: 9116202268975909160}
-  - component: {fileID: 1337118963}
   m_Layer: 0
   m_Name: SomethingThatCanShootBeam
   m_TagString: Turret
@@ -110,8 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47de02c8768eb4eceaae71b4b8e60f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  direction: 0
+  speed: 5
 --- !u!54 &9116202268975909160
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,25 +126,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!95 &1337118963
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3925306170777068563}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 635e1fdc5c75df94f9a891441151057f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8256654452442127058
 GameObject:
   m_ObjectHideFlags: 0
