@@ -43,12 +43,8 @@ public class LaserController : MonoBehaviour
     {
       if (hit.collider.tag.Equals("Reflector"))
       {
-        // Transform portal = hit.collider.transform;
-        // Transform nextPortal = portal.GetComponent<Portal>().linkedPortal.transform;
         Vector3 nextStart = hit.point;
         Vector3 nextDirection = Vector3.Reflect(direction, hit.transform.up);
-
-        Debug.Log("Reflected: " + direction + " to " + nextDirection);
 
         limit -= 1;
 
@@ -62,6 +58,7 @@ public class LaserController : MonoBehaviour
       }
       else if (hit.collider.tag.Equals("Player"))
       {
+        hit.collider.gameObject.active = false;
         Debug.Log("<color=red>You're ded. noob xD</color>");
       }
       else if (hit.collider.tag.Equals("GlassWall"))
