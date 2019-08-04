@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 262698519}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 658015495}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 736508759}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 871434102}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 909159797}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 919253279}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 1106084207}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5731,7 +5731,7 @@ GameObject:
   - component: {fileID: 1219744351}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5824,7 +5824,7 @@ GameObject:
   - component: {fileID: 1334443665}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15554,7 +15554,7 @@ GameObject:
   - component: {fileID: 1676877695}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15738,7 +15738,7 @@ GameObject:
   - component: {fileID: 1744383665}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20714,7 +20714,7 @@ GameObject:
   - component: {fileID: 2140332407}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Wall
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21344,7 +21344,7 @@ PrefabInstance:
     - target: {fileID: 8320054535210593887, guid: cd5d6d4190dccdb44a95f70371fc1438,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9052650539209613133, guid: cd5d6d4190dccdb44a95f70371fc1438,
         type: 3}
