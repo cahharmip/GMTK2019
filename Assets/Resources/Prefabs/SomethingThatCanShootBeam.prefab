@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   step: 1
+  startWithGoingRight: 1
 --- !u!54 &9116202268975909160
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a0cf71455b59b343b723b18e88a0626, type: 2}
+  - {fileID: 2100000, guid: f717f3efcf2ba498e838059e2399ba38, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
