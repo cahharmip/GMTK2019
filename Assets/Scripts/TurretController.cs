@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public  enum Direction
+{
+  LEFT,
+  RIGHT,
+  UP,
+  DOWN
+}
+
 public class TurretController : MonoBehaviour
 {
   public float speed = 100f;
   public float step = 1f;
-  public bool startWithGoingRight = true;
+  public string moveSet;
+  private Direction[] moves;
+  private int _moveIdx = -1;
   private Vector3 _currentDirection;
   private Vector3 _targetPosition;
   private Vector3 _startMarker;
@@ -14,9 +24,33 @@ public class TurretController : MonoBehaviour
   private float _journeyLength;
   private bool _started = false;
 
-  void Awake()
+  private void Start()
   {
-    _currentDirection = transform.right;
+    GenerateMoveset();
+  }
+
+  void GenerateMoveset()
+  {
+    moves = new Direction[moveSet.Length];
+    for (int i = 0; i < moveSet.Length; i++)
+    {
+      char move = moveSet[i];
+      switch (move)
+      {
+        case 'L':
+          moves[i] = Direction.LEFT;
+          break;
+        case 'R':
+          moves[i] = Direction.RIGHT;
+          break;
+        case 'U':
+          moves[i] = Direction.UP;
+          break;
+        case 'D':
+          moves[i] = Direction.DOWN;
+          break;
+      }
+    }
   }
 
   void Update()
@@ -32,24 +66,32 @@ public class TurretController : MonoBehaviour
     transform.position = Vector3.Lerp(_startMarker, _targetPosition, fracJourney);
   }
 
-  private void OnCollisionEnter(Collision collision)
-  {
-    if (collision.gameObject.tag.Equals("Wall") || collision.gameObject.tag.Equals("GlassWall") || collision.gameObject.tag.Equals("Turret"))
-    {
-      if (collision.contactCount > 2)
-      {
-        _currentDirection = collision.gameObject.transform.position - transform.position;
-        _currentDirection = -_currentDirection.normalized;
-      }
-    }
-  }
-
   public void Jump()
   {
     CalculateNewTargetPosition();
   }
   private void CalculateNewTargetPosition()
   {
+    _moveIdx += 1;
+    if (_moveIdx == moves.Length)
+    {
+      _moveIdx = 0;
+    }
+    switch (moves[_moveIdx])
+    {
+      case Direction.LEFT:
+        _currentDirection = -transform.right;
+        break;
+      case Direction.RIGHT:
+        _currentDirection = transform.right;
+        break;
+      case Direction.UP:
+        _currentDirection = transform.up;
+        break;
+      case Direction.DOWN:
+        _currentDirection = -transform.up;
+        break;
+    }
     _started = true;
     _startTime = Time.time;
     _targetPosition = transform.position + (_currentDirection.normalized * step);

@@ -1141,6 +1141,11 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8201569003199489182, guid: f08e2b9d9e89f714183ad1d78c2342d1,
+        type: 3}
+      propertyPath: moveSet
+      value: RRRLLL
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08e2b9d9e89f714183ad1d78c2342d1, type: 3}
 --- !u!1001 &736289329
@@ -3643,6 +3648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201569003199489182, guid: f08e2b9d9e89f714183ad1d78c2342d1,
+        type: 3}
+      propertyPath: moveSet
+      value: LRRRLL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08e2b9d9e89f714183ad1d78c2342d1, type: 3}
